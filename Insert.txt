@@ -1,0 +1,105 @@
+INSERT INTO genre VALUES(1,'pop’);
+INSERT INTO genre VALUES(2,'hip-hop');
+INSERT INTO genre VALUES (3,'techno');
+INSERT INTO genre VALUES (4,'rock');
+INSERT INTO genre VALUES (5,'old school’);
+
+INSERT INTO artist VALUES(1,'Celine Dion');
+INSERT INTO artist VALUES (2,'Britney Spears');
+INSERT INTO artist VALUES (3,'AC/DC');
+INSERT INTO artist VALUES (4,'KISS');
+INSERT INTO artist VALUES(5,'Scooter');
+INSERT INTO artist VALUES (6,'Prodigy');
+INSERT INTO artist VALUES (7,'Onyx');
+INSERT INTO artist VALUES (8,'2pac');
+INSERT INTO artist VALUES(9,'Eminem');
+INSERT INTO artist VALUES (10,'Wu-Tang’);
+
+INSERT INTO album VALUES(1,'Lets talk about love',1997);
+INSERT INTO album VALUES (2,'Circus',2008);
+INSERT INTO album VALUES (3,'Back in Black',1980);
+INSERT INTO album VALUES (4,'Dynasty',1979);
+INSERT INTO album VALUES(5,'Ace',2016);
+INSERT INTO album VALUES (6,'The fat of the Land',1997);
+INSERT INTO album VALUES (7,'Shut em Down',1998);
+INSERT INTO album VALUES (8,'Me Against the World',1995);
+INSERT INTO album VALUES(9,'Encore',2004);
+INSERT INTO album VALUES (10,'Iron Flag',2001);
+
+INSERT INTO track VALUES(1,'My Heart will go on',4.05,1);
+INSERT INTO track VALUES (2,'Tell Him',3.15,1);
+INSERT INTO track VALUES (3,'Circus',2.55,2);
+INSERT INTO track VALUES (4,'Womanizer',3.05,2);
+INSERT INTO track VALUES(5,'Back in Black',4.00,3);
+INSERT INTO track VALUES (6,'Hells Bells',3.58,3);
+INSERT INTO track VALUES (7,'I Was Made for lovin you',3.20,4);
+INSERT INTO track VALUES (8,'Man',3.15,4);
+INSERT INTO track VALUES(9,'Wolga',3.25,5);
+INSERT INTO track VALUES (10,'Crazy',4.18,5);
+INSERT INTO track VALUES(11,'Breathe',3.10,6);
+INSERT INTO track VALUES (12,'Firestarter',4.00,6);
+INSERT INTO track VALUES (13,'Street Nigguz',3.12,7);
+INSERT INTO track VALUES (14,'Raze it Up',3.30,7);
+INSERT INTO track VALUES(15,'Dear Mama',2.50,8);
+INSERT INTO track VALUES (16,'Outlaw',3.13,8);
+INSERT INTO track VALUES (17,'Mosh',4.10,9);
+INSERT INTO track VALUES (18,'Rain Man',3.15,9);
+INSERT INTO track VALUES(19,'Rules',4.20,10);
+INSERT INTO track VALUES (20,'Yall Been Warned',3.41,10);
+
+
+
+INSERT INTO collection VALUES(1,'Pop Music',2010);
+INSERT INTO collection VALUES (2,'Techno Music',2015);
+INSERT INTO collection VALUES (3,'Rock Music',2017);
+INSERT INTO collection VALUES (4,'Hip-Hop Music',2016);
+INSERT INTO collection VALUES(5,'Old collection',2019);
+INSERT INTO collection VALUES (6,'Best collection',2018);
+INSERT INTO collection VALUES (7,'Hits',2016);
+INSERT INTO collection VALUES (8,'Dance collection',2020);
+
+
+insert into genreartist values (1,1,1);
+insert into genreartist values (2,1,2);
+insert into genreartist values (3,4,3);
+insert into genreartist values (4,4,4);
+insert into genreartist values (5,3,5);
+insert into genreartist values (6,3,6);
+insert into genreartist values (7,5,7);
+insert into genreartist values (8,5,8);
+insert into genreartist values (9,2,9);
+insert into genreartist values (10,2,10);
+insert into genreartist values (11,2,11);
+insert into genreartist values (12,2,12);
+
+
+
+insert into artistalbum values (1,1,1);
+insert into artistalbum values (2,2,2);
+insert into artistalbum values (3,3,3);
+insert into artistalbum values (4,4,4);
+insert into artistalbum values (5,5,5);
+insert into artistalbum values (6,6,6);
+insert into artistalbum values (7,7,7);
+insert into artistalbum values (8,8,8);
+insert into artistalbum values (9,9,9);
+insert into artistalbum values (10,10,10);
+
+
+
+insert into collectiontrack values (1,1,1);
+insert into collectiontrack values (3,1,2);
+insert into collectiontrack values (2,11,3);
+insert into collectiontrack values (2,9,4);
+insert into collectiontrack values (3,6,5);
+insert into collectiontrack values (3,7,6);
+insert into collectiontrack values (4,17,7);
+insert into collectiontrack values (4,15,8);
+insert into collectiontrack values (5,13,9);
+insert into collectiontrack values (5,14,10);
+insert into collectiontrack values (6,12,11);
+insert into collectiontrack values (6,10,12);
+insert into collectiontrack values (7,1,13);
+insert into collectiontrack values (7,4,14);
+insert into collectiontrack values (8,4,15);
+insert into collectiontrack values (8,11,16);
