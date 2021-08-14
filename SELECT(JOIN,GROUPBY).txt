@@ -1,0 +1,90 @@
+1.SELECT COUNT(artist_id) FROM genreartist
+
+GROUP BY genre_id;
+
+
+
+2.SELECT COUNT (t.id) AS c FROM track t
+
+JOIN album a ON t.album_id=a.id WHERE a.year BETWEEN 1992 and 1998;
+
+
+
+3.SELECT AVG(length) FROM track 
+
+GROUP BY album_id;
+
+
+
+4.SELECT COUNT(artist_id) AS c FROM artistalbum aa 
+
+LEFT JOIN album al ON aa.album_id=al.id
+
+WHERE al.year NOT IN ('1998’);
+
+
+
+5.SELECT c.name FROMcollection c
+
+JOIN collectiontrack ct on c.id=ct.collection_id 
+
+JOIN track t ON ct.track_id = t.id 
+
+JOIN artistalbum aa ON t.album_id = aa.album_id 
+
+JOIN artist ar ON aa.artist_id = ar.id 
+
+WHERE ar.id = 5;
+
+
+
+6.SELECT al.name FROM album al
+
+JOIN artistalbum aa ON aa.album_id = al.id
+
+JOIN artist ar ON ar.id = aa.artist_id 
+
+JOIN genreartist ga ON ga.artist_id = ar.id
+
+GROUP BY al.name
+
+HAVING COUNT(ga.genre_id) > 1;
+
+
+
+7.SELECT t.name FROM track t 
+
+LEFT JOIN collectiontrack c ON t.id = c.track_id
+
+WHERE t.id NOT IN (SELECT track_id FROM collectiontrack);
+
+
+
+8.SELECT ar.name, t.length FROM artist ar
+
+JOIN artistalbum aa  ON ar.id = aa.artist_id 
+
+JOIN album al ON aa.album_id = al.id
+
+JOIN track t ON al.id = t.album_id 
+
+WHERE t.length = (SELECT MIN(t.length) FROM track t);
+
+
+
+9.SELECT a.name, COUNT(t.album_id) FROM album a
+
+JOIN track t ON a.id = t.album_id
+
+GROUP BY a.name, t.album_id
+
+HAVING COUNT(t.album_id) = (
+
+SELECT MIN(count)
+
+FROM (SELECT COUNT(t.album_id) FROM album a
+
+JOIN track t ON a.id = t.album_id
+
+GROUP BY t.album_id)AS count);
+
